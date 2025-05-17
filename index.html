@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="CuidaT: Guía de primeros auxilios para emergencias comunes."
+    />
+    <meta
+        name="keywords"
+        content="CuidaT, primeros auxilios, emergencia, guía"
+    />
+    <meta name="author" content="Equipo de Primeros Auxilios de CuidaT" />
+    <title>CuidaT: Guía de Primeros Auxilios</title>
+    <link rel="icon" href="image/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <div class="contenedor">
+                <a href="index.html" class="logo-nav">
+                    <span class="texto-rojo">cui</span><span class="texto-celeste">daT</span>
+                </a>
+                <button class="boton-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu">
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="guia.html">Guía</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="acerca.html">Acerca de</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <article class="guia-basica-destacada">
+            <h2><i class="fas fa-clipboard-check"></i> Guía Básica de Primeros Auxilios</h2>
+            <p>Sigue estos pasos esenciales en cualquier situación de emergencia:</p>
+            <ol>
+                <li><strong>Asegura el entorno:</strong> Garantiza tu seguridad y la de la persona afectada.</li>
+                <li><strong>Evalúa la conciencia:</strong> ¿Responde la persona?</li>
+                <li><strong>Llama a emergencias:</strong> Si es necesario, contacta al número local de emergencias.</li>
+                <li><strong>Revisa la respiración y el pulso:</strong> ¿Está respirando? ¿Tiene pulso?</li>
+                <li><strong>Brinda los primeros auxilios necesarios:</strong> Actúa según la situación.</li>
+                <li><strong>Mantén a la persona cómoda y vigilada</strong> hasta que llegue la ayuda profesional.</li>
+            </ol>
+            <p><a href="guia.html" class="boton-ver-mas">Ver guía completa</a></p>
+        </article>
+
+        <div class="llamada-emergencia">
+            <i class="fas fa-phone-alt"></i> En caso de emergencia grave, llama
+            inmediatamente al número de emergencias local (911, 112, etc.)
+        </div>
+
+        <section class="videos-destacados">
+            <h2><i class="fas fa-play-circle"></i> Videos Destacados</h2>
+            <div class="carousel-videos">
+                <div class="video-card">
+                    <img src="https://i.ytimg.com/vi/VV_PVfF-2cM/mqdefault.jpg" alt="Miniatura">
+                    <h3>APRENDE A APLICAR LOS AUXILIOS PSICOLÓGICOS ANTE UNA CRISIS</h3>
+                    <a href="https://youtu.be/VV_PVfF-2cM">Ver video</a>
+                </div>
+                <div class="video-card">
+                    <img src="https://i.ytimg.com/vi/GUIv62M6RPU/mqdefault.jpg" alt="Miniatura">
+                    <h3>Aprende gestos de primeros auxilios - Botiquín de emergencia</h3>
+                    <a href="http://www.youtube.com/watch?v=GUIv62M6RPU">Ver video</a>
+                </div>
+                <div class="video-card">
+                    <img src="https://i.ytimg.com/vi/ku2GDtpa-Ok/mqdefault.jpg" alt="Miniatura">
+                    <h3>10 Errores en los Primeros Auxilios</h3>
+                    <a href="https://www.youtube.com/watch?v=ku2GDtpa-Ok">Ver video</a>
+                </div>
+                <div class="video-card">
+                    <img src="https://i.ytimg.com/vi/WBOTKyBEwsQ/mqdefault.jpg" alt="Miniatura">
+                    <h3>¿Cómo asistir a una persona con discapacidad durante una emergencia?</h3>
+                    <a href="https://www.youtube.com/watch?v=WBOTKyBEwsQ">Ver video</a>
+                </div>
+                <div class="video-card">
+                    <img src="https://i.ytimg.com/vi/DUmzhmzOEMw/mqdefault.jpg" alt="Miniatura">
+                    <h3>Primeros Auxilios en el Trabajo</h3>
+                    <a href="http://www.youtube.com/watch?v=DUmzhmzOEMw">Ver video</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-interactivo">
+            <h2><i class="fas fa-question-circle"></i> ¿Qué tan preparado estás? - Test Rápido</h2>
+            <p>Pon a prueba tus conocimientos básicos de primeros auxilios con este breve test.</p>
+            <form id="testPrimerosAuxilios">
+                <div class="pregunta">
+                    <label for="pregunta1">¿Cuál es la primera acción ante una persona inconsciente?</label>
+                    <select id="pregunta1" name="pregunta1">
+                        <option value="">Selecciona una opción</option>
+                        <option value="llamar">Llamar a emergencias</option>
+                        <option value="revisar">Revisar si respira</option>
+                        <option value="daragua">Darle agua</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label for="pregunta2">¿Cómo se detiene una hemorragia leve?</label>
+                    <select id="pregunta2" name="pregunta2">
+                        <option value="">Selecciona una opción</option>
+                        <option value="presion">Aplicando presión directa</option>
+                        <option value="torniquete">Aplicando un torniquete</option>
+                        <option value="agua">Lavando con agua fría</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label for="pregunta3">¿Cuánto tiempo se recomienda lavar las manos para una buena higiene?</label>
+                    <select id="pregunta3" name="pregunta3" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="10">10 segundos</option>
+                        <option value="20">Al menos 20 segundos</option>
+                        <option value="30">30 segundos</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label for="pregunta4">¿Cuál es el signo principal de un atragantamiento grave en un adulto?</label>
+                    <select id="pregunta4" name="pregunta4" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="tosvigorosa">Tos vigorosa</option>
+                        <option value="manuellcuello">Llevarse las manos al cuello (signo universal de asfixia)</option>
+                        <option value="llorar">Llorar o quejarse</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label for="pregunta5">¿Qué solución se utiliza comúnmente para lavar una herida leve?</label>
+                    <select id="pregunta5" name="pregunta5" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="alcohol">Alcohol</option>
+                        <option value="aguaoxigenada">Agua oxigenada</option>
+                        <option value="aguayjabon">Agua y jabón suave</option>
+                    </select>
+                </div>
+                <button type="submit">Ver resultados</button>
+                <div id="resultadoTest" class="oculto"></div>
+            </form>
+        </section>
+    </main>-
+
+    <footer>
+      <div class="pie-de-pagina">
+        <div class="seccion-pie contacto">
+          <h3>Contacto</h3>
+            <p><i class="fas fa-envelope icono-pie"></i> <a href="mailto:info@cuidat.com" class="enlace-pie">info@cuidat.com</a></p>
+            <p><i class="fas fa-phone-alt icono-pie"></i> <a href="tel:+593999999999" class="enlace-pie">+593 999 999 999</a></p>
+            <p><i class="fas fa-map-marker-alt icono-pie"></i> <a href="https://www.google.com/maps/place/Guayaquil" target="_blank" class="enlace-pie">Guayaquil, Ecuador</a></p>
+        </div>
+        <div class="seccion-pie legal-pie">
+          <p><a href="#" class="enlace-pie">Política de Privacidad</a></p>
+          <p><a href="#" class="enlace-pie">Términos de Uso</a></p>
+          <p class="copyright-pie">© 2025 CuidaT. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/test.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
