@@ -14,35 +14,33 @@
     <div class="campos-pequenos">
       <div class="campo">
         <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
-        <p class="error-mensaje" id="errorNombre"></p>
+        <input type="text" id="nombre" name="nombre" />
       </div>
       <div class="campo">
         <label for="email"><i class="fas fa-envelope"></i> Email:</label>
-        <input type="email" id="email" name="email" required />
-        <p class="error-mensaje" id="errorEmail"></p>
+        <input type="email" id="email" name="email" />
       </div>
       <div class="campo">
         <label for="telefono"
           ><i class="fas fa-phone"></i> Teléfono (opcional):</label
         >
         <input type="tel" id="telefono" name="telefono" />
-        <p class="error-mensaje" id="errorTelefono"></p>
       </div>
     </div>
     <div class="campo campo-grande">
       <label for="mensaje"><i class="fas fa-comment-dots"></i> Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-      <p class="error-mensaje" id="errorMensaje"></p>
+      <textarea id="mensaje" name="mensaje" rows="5"></textarea>
     </div>
     <button type="submit" class="boton-enviar">
       <i class="fas fa-paper-plane"></i> Enviar Mensaje
     </button>
+
+    <!-- Mensaje de error -->
+    <div id="mensajeError" class="mensaje-error oculto"></div>
+
+    <!-- Mensaje de confirmación -->
     <div id="mensajeEnviado" class="mensaje-enviado oculto">
       <p>¡Gracias! Tu mensaje ha sido enviado correctamente.</p>
-    </div>
-    <div id="mensajeError" class="mensaje-error oculto">
-      <p>Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.</p>
     </div>
   </form>
 </section>

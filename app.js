@@ -1,35 +1,59 @@
 const express = require("express");
-const app = express();
+const cors = require("cors");
 const expressLayouts = require("express-ejs-layouts");
-const mainRoutes = require("./routes/mainRoutes");
-const apiRoutes = require("./routes/apiRoutes");
-app.use("/api", apiRoutes);
 
-// Configuración de EJS
+const app = express();
+
+// ------------------------------
+// Middlewares globales (antes de las rutas)
+// ------------------------------
+
+// Permitir CORS para todas las peticiones (importante que esté primero)
+app.use(cors());
+
+// Parsear JSON en el body
+app.use(express.json());
+
+// Parsear datos urlencoded (formularios)
+app.use(express.urlencoded({ extended: true }));
+
+// Middleware para evitar error 'activo' undefined en vistas
+app.use((req, res, next) => {
+  res.locals.activo = "";
+  next();
+});
+
+// ------------------------------
+// Configuración de motor de vistas
+// ------------------------------
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(expressLayouts);
 app.set("layout", "layout");
 
-// Middleware para parsear JSON
-app.use(express.json());
-
-// Middleware para parsear formularios urlencoded (si usas formularios HTML)
-app.use(express.urlencoded({ extended: true }));
-
-// Middleware para archivos estáticos (CSS, JS, imágenes)
+// ------------------------------
+// Archivos estáticos
+// ------------------------------
 app.use(express.static(__dirname + "/public"));
 
-// ✅ Middleware global para que `activo` siempre exista y no dé error
-app.use((req, res, next) => {
-  res.locals.activo = ""; // valor por defecto
-  next();
-});
-
+// ------------------------------
 // Rutas
+// ------------------------------
+
+// Rutas web principales
+const mainRoutes = require("./routes/mainRoutes");
 app.use("/", mainRoutes);
 
+// Rutas API (aquí estarán tus endpoints tipo /api/mensajes)
+const apiRoutes = require("./routes/apiRoutes");
+app.use("/api", apiRoutes);
+
+// ------------------------------
 // Inicio del servidor
-app.listen(3000, () => {
-  console.log("Servidor en http://localhost:3000");
+// ------------------------------
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor en http://localhost:${PORT}`);
 });
+
+
