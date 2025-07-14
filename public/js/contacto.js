@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        id: 0,
         nombre: nombre.value.trim(),
         email: email.value.trim(),
         telefono: telefono.value.trim(),
@@ -64,10 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(function (data) {
+        console.log("Respuesta del backend:", data);
         formulario.reset();
         mensajeEnviado.classList.remove("oculto");
       })
       .catch(function (error) {
+        console.error("Error al enviar:", error);
         mensajeError.textContent =
           "Ocurrió un error al enviar el mensaje. Intenta nuevamente.";
         mensajeError.classList.remove("oculto");
