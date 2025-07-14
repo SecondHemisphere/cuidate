@@ -30,25 +30,6 @@
     </div>
   </section>
 
-  <!-- Tabla con usuarios -->
-  <section class="seccion-dashboard">
-    <h2 class="titulo-seccion">Usuarios</h2>
-    <table id="tablaUsuarios" class="tabla-usuarios">
-      <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Email</th>
-      </tr>
-      <% usuarios.forEach(u => { %>
-      <tr>
-        <td><%= u.id %></td>
-        <td><%= u.nombre %></td>
-        <td><%= u.email %></td>
-      </tr>
-      <% }) %>
-    </table>
-  </section>
-
   <!-- Lista con mensajes pendientes -->
   <section class="seccion-dashboard">
     <h2 class="titulo-seccion">Mensajes Pendientes</h2>

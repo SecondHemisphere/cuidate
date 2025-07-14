@@ -1,33 +1,32 @@
 /* dashboard.css */
 
 .dashboard-contenedor {
-  max-width: 1100px;
   margin: 0 auto;
 }
 
 .titulo-dashboard {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 25px;
+  margin-bottom: 1.6rem;
 }
 
 /* Tarjetas resumen */
 .tarjetas-dashboard {
   display: flex;
-  gap: 25px;
-  margin-bottom: 40px;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
 }
 
 .tarjeta {
   background-color: #3498db;
   color: white;
-  padding: 25px 30px;
-  border-radius: 10px;
+  padding: 1.6rem 1.9rem;
+  border-radius: 0.625rem;
   flex: 1;
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+  box-shadow: 0 0.25rem 0.625rem rgba(52, 152, 219, 0.4);
   transition: background-color 0.3s ease;
 }
 
@@ -36,20 +35,20 @@
 }
 
 .icono-tarjeta {
-  font-size: 3.5rem;
-  margin-right: 20px;
+  font-size: 4.375rem;
+  margin-right: 1.25rem;
   opacity: 0.8;
 }
 
 /* Contenido dentro de la tarjeta */
 .contenido-tarjeta h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .contenido-tarjeta p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -80,35 +79,37 @@
 
 /* Secciones de tabla y lista */
 .seccion-dashboard {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .titulo-seccion {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 /* Tabla usuarios */
 .tabla-usuarios {
   width: 100%;
   border-collapse: collapse;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .tabla-usuarios th,
 .tabla-usuarios td {
-  padding: 12px 15px;
+  padding: 0.75rem 0.9375rem;
   text-align: left;
+  font-size: 1.6rem;
 }
 
 .tabla-usuarios th {
   background-color: #3498db;
   color: #fff;
   font-weight: 700;
+  font-size: 1.8rem;
 }
 
 .tabla-usuarios tr:nth-child(even) {
@@ -127,15 +128,16 @@
 
 .lista-mensajes li {
   background-color: #f8d7da;
-  border-left: 5px solid #e74c3c;
-  padding: 12px 15px;
-  margin-bottom: 10px;
+  border-left: 0.3125rem solid #e74c3c;
+  padding: 0.75rem 0.9375rem;
+  margin-bottom: 0.625rem;
   font-weight: 600;
+  font-size: 1.6rem;
   color: #721c24;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .lista-mensajes li strong {
-  margin-right: 8px;
+  margin-right: 0.5rem;
   color: #c82333;
 }
