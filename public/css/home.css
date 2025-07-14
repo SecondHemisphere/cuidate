@@ -1,0 +1,266 @@
+/* Hero */
+.hero {
+  position: relative;
+  background: url('../image/fondo-auxilios.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.contenedor-hero {
+  position: relative;
+  z-index: 2;
+}
+
+.contenedor-hero h1 {
+  font-size: 4rem;
+}
+
+.contenedor-hero p {
+  font-size: 2.4rem;
+  padding: 2rem 1rem;
+}
+
+.boton-principal {
+  display: inline-block;
+  margin: 2rem 1rem;
+  padding: 1.2rem 3rem;
+  background-color: var(--color-primario);
+  color: white;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Secciones Comunes */
+.guia-destacada,
+.videos-destacados,
+.test-interactivo {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 1.2rem var(--color-sombra-caja);
+  margin: 2rem 0 3rem;
+}
+
+.guia-destacada h2,
+.videos-destacados h2,
+.test-interactivo h2 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+}
+
+.guia-destacada h2 {
+  color: var(--color-secundario);
+}
+
+.videos-destacados h2 {
+  color: var(--color-oscuro);
+}
+
+.test-interactivo h2 {
+  color: var(--color-primario);
+}
+
+.guia-destacada ol {
+  margin: 1rem 0 1.5rem 2rem;
+}
+
+.guia-destacada li,
+.guia-destacada a,
+.test-interactivo p,
+.test-interactivo label,
+.test-interactivo input[type="text"],
+.test-interactivo select,
+.test-interactivo button[type="submit"],
+.test-interactivo a,
+.video-card a {
+  font-size: 1.6rem;
+}
+
+.guia-destacada li {
+  margin-bottom: 0.8rem;
+}
+
+.guia-destacada a,
+.test-interactivo a,
+.video-card a {
+  text-decoration: none;
+  color: var(--color-secundario);
+}
+
+.test-interactivo a {
+  color: var(--color-primario);
+  font-weight: bold;
+}
+
+.test-interactivo a:hover {
+  text-decoration: underline;
+}
+
+/* Carrusel de Videos */
+.videos-destacados {
+  scroll-behavior: smooth;
+}
+
+.carrusel-videos {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+}
+
+.carousel-videos::-webkit-scrollbar {
+  height: 12px;
+}
+
+.carousel-videos::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 0.6rem;
+}
+
+.carousel-videos::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 0.6rem;
+}
+
+.carousel-videos::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+
+.video-card {
+  flex: 0 0 auto;
+  width: 300px;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.video-card h3 {
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.video-card a {
+  padding-left: 1rem;
+}
+
+.video-card a:hover {
+  background-color: white;
+}
+
+/* Test Interactivo */
+.test-interactivo p {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
+}
+
+.test-interactivo .pregunta {
+  margin-bottom: 1.5rem;
+}
+
+.test-interactivo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.test-interactivo input[type="text"],
+.test-interactivo select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 0.1rem solid lightgrey;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+}
+
+.test-interactivo button[type="submit"] {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  .contenedor-hero h1 {
+    font-size: 3rem;
+  }
+
+  .contenedor-hero p {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .boton-principal {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+
+  .video-card {
+    width: 80vw;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .contenedor-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .contenedor-hero p {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .boton-principal {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .video-card {
+    width: 90vw;
+  }
+
+  .guia-destacada h2,
+  .videos-destacados h2,
+  .test-interactivo h2 {
+    font-size: 1.7rem;
+  }
+
+  .guia-destacada li,
+  .test-interactivo p,
+  .test-interactivo label,
+  .test-interactivo input[type="text"],
+  .test-interactivo select,
+  .test-interactivo button[type="submit"],
+  .video-card a {
+    font-size: 1.5rem;
+  }
+}

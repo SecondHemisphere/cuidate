@@ -1,0 +1,38 @@
+<header>
+  <nav class="navegacion" role="navigation">
+    <div class="contenedor">
+      <a href="index.html" class="logo-nav">
+        <span class="texto-blanco">cuidaT</span>
+      </a>
+      <button class="boton-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="menu">
+        <li>
+          <a href="/" class="<%= activo === 'inicio' ? 'menu-activo' : '' %>"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a href="/guia" class="<%= activo === 'guia' ? 'menu-activo' : '' %>"
+            >Guía</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contacto"
+            class="<%= activo === 'contacto' ? 'menu-activo' : '' %>"
+            >Contacto</a
+          >
+        </li>
+        <li>
+          <a
+            href="/acerca"
+            class="<%= activo === 'acerca' ? 'menu-activo' : '' %>"
+            >Acerca de</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

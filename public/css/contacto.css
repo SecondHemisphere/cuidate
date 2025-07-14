@@ -1,0 +1,175 @@
+/* Contáctanos */
+.contactanos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.4rem 1.2rem var(--color-sombra-caja);
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.contactanos .texto {
+  max-width: 60rem;
+}
+
+.contactanos h1 {
+  font-size: 2.3rem;
+  color: var(--color-secundario);
+  margin-bottom: 0.5rem;
+}
+
+.contactanos .subtitulo {
+  font-size: 1.8rem;
+  color: var(--color-subtitulo);
+}
+
+.contactanos .logo {
+  width: auto;
+  margin-right: 1rem;
+}
+
+/* Formulario de Contacto */
+.formulario-contacto {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 0.4rem 0.1rem var(--color-sombra-caja);
+  margin-top: 2rem;
+}
+
+.formulario-contacto h2 {
+  font-size: 1.8rem;
+  color: var(--color-oscuro);
+  margin-bottom: 1.5rem;
+}
+
+.campos-pequenos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.campo {
+  flex: 1 1 25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.campo input,
+.campo textarea {
+  padding: 0.75rem;
+  border: 0.2rem solid var(--color-oscuro);
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo-grande {
+  margin-top: 1.5rem;
+}
+
+.error-mensaje {
+  color: var(--color-primario);
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+}
+
+/* Botón Enviar */
+.boton-enviar {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Mensajes de Respuesta */
+.mensaje-enviado,
+.mensaje-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mensaje-enviado {
+  background-color: #d4edda;
+  color: var(--color-exito);
+  border: 1px solid var(--color-border-exito);
+}
+
+.mensaje-error {
+  background-color: #f8d7da;
+  color: var(--color-peligro);
+  border: 1px solid var(--color-border-peligro);
+}
+
+.oculto {
+  display: none;
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  .contactanos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contactanos .texto {
+    max-width: 100%;
+  }
+
+  .contactanos .logo {
+    margin: 0 auto;
+  }
+
+  .campos-pequenos {
+    flex-direction: column;
+  }
+
+  .campo {
+    flex: 1 1 100%;
+  }
+
+  .formulario-contacto {
+    padding: 1.5rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .contactanos h1 {
+    font-size: 1.8rem;
+  }
+
+  .contactanos .subtitulo,
+  .formulario-contacto h2,
+  .campo label,
+  .campo input,
+  .campo textarea {
+    font-size: 1.4rem;
+  }
+
+  .boton-enviar {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+}
