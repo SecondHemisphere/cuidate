@@ -6,12 +6,14 @@
     <meta name="description" content="Panel de Administración - CuidaT" />
     <meta name="author" content="Equipo de CuidaT" />
 
-    <title><%= title || 'CuidaT Admin' %></title>
+    <title><%= title || 'CuidaT: Guía de Primeros Auxilios' %></title>
 
     <link rel="icon" href="/image/logo.png" type="image/png" />
+    <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
     <link rel="stylesheet" href="/css/admin.css" />
-    <!-- Hoja CSS exclusiva admin -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -22,38 +24,53 @@
     <div class="admin-layout">
       <!-- Sidebar -->
       <aside class="sidebar">
-        <div class="sidebar-logo">
-          <img src="/image/logo.png" alt="CuidaT Admin" />
+        <div class="sidebar-header">
+          <img src="/image/logo.png" alt="CuidaT Logo" class="logo-sidebar" />
+          <h2>CuidaT Admin</h2>
         </div>
         <nav class="sidebar-nav">
           <ul>
             <li>
-              <a href="/admin/dashboard"
-                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+              <a
+                href="/admin/dashboard"
+                class="<%= activo === 'dashboard' ? 'activo' : '' %>"
               >
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
             </li>
             <li>
-              <a href="/admin/usuarios"
-                ><i class="fas fa-users"></i> Usuarios</a
+              <a
+                href="/admin/usuarios"
+                class="<%= activo === 'usuarios' ? 'activo' : '' %>"
               >
+                <i class="fas fa-users"></i>
+                <span>Usuarios</span>
+              </a>
             </li>
             <li>
-              <a href="/admin/mensajes"
-                ><i class="fas fa-envelope"></i> Mensajes</a
+              <a
+                href="/admin/mensajes"
+                class="<%= activo === 'mensajes' ? 'activo' : '' %>"
               >
+                <i class="fas fa-envelope"></i>
+                <span>Mensajes</span>
+              </a>
             </li>
             <li>
-              <a href="/admin/configuracion"
-                ><i class="fas fa-cogs"></i> Configuración</a
+              <a
+                href="/admin/configuracion"
+                class="<%= activo === 'configuracion' ? 'activo' : '' %>"
               >
+                <i class="fas fa-cogs"></i>
+                <span>Configuración</span>
+              </a>
             </li>
             <li>
-              <a href="/"><i class="fas fa-home"></i> Volver al sitio</a>
-            </li>
-            <li>
-              <a href="/logout"
-                ><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a
-              >
+              <a href="/logout" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Cerrar sesión</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -61,12 +78,10 @@
 
       <!-- Contenido principal -->
       <div class="main-admin">
-        <!-- Header Admin -->
         <header class="admin-header">
           <h1>Panel de Administración</h1>
         </header>
 
-        <!-- Contenido dinámico -->
         <main class="contenido-admin"><%- body %></main>
       </div>
     </div>

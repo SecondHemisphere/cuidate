@@ -1,51 +1,61 @@
 <div class="dashboard-contenedor" id="dashboard">
   <h1 class="titulo-dashboard">Dashboard</h1>
 
+  <section class="tarjetas-dashboard">
+    <div class="tarjeta resumen-usuarios">
+      <i class="fas fa-users icono-tarjeta"></i>
+      <div class="contenido-tarjeta">
+        <h3>Usuarios</h3>
+        <p><%= usuarios.length %></p>
+        <!-- Cantidad total de usuarios -->
+      </div>
+    </div>
+
+    <div class="tarjeta resumen-mensajes">
+      <i class="fas fa-envelope icono-tarjeta"></i>
+      <div class="contenido-tarjeta">
+        <h3>Mensajes</h3>
+        <p><%= mensajes.length %></p>
+        <!-- Cantidad total de mensajes -->
+      </div>
+    </div>
+
+    <div class="tarjeta resumen-pendientes">
+      <i class="fas fa-exclamation-circle icono-tarjeta"></i>
+      <div class="contenido-tarjeta">
+        <h3>Pendientes</h3>
+        <p><%= pendientes.length %></p>
+        <!-- Cantidad de mensajes pendientes -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla con usuarios -->
   <section class="seccion-dashboard">
     <h2 class="titulo-seccion">Usuarios</h2>
     <table id="tablaUsuarios" class="tabla-usuarios">
-      <!-- Se llena dinámicamente con JS -->
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+      </tr>
+      <% usuarios.forEach(u => { %>
+      <tr>
+        <td><%= u.id %></td>
+        <td><%= u.nombre %></td>
+        <td><%= u.email %></td>
+      </tr>
+      <% }) %>
     </table>
   </section>
 
+  <!-- Lista con mensajes pendientes -->
   <section class="seccion-dashboard">
     <h2 class="titulo-seccion">Mensajes Pendientes</h2>
     <ul id="listaMensajes" class="lista-mensajes">
-      <!-- Se llena con mensajes -->
+      <% pendientes.forEach(m => { %>
+      <li><strong><%= m.nombre %></strong> - <%= m.mensaje %></li>
+      <% }) %>
     </ul>
   </section>
-
-  <section
-    id="respuestaMensaje"
-    class="panel-respuesta-mensaje"
-    style="display: none"
-  >
-    <h3 class="titulo-respuesta">Responder mensaje</h3>
-    <p id="mensajeDetalle" class="detalle-mensaje"></p>
-    <textarea id="respuestaText" class="textarea-respuesta"></textarea>
-    <div class="contenedor-botones">
-      <button id="enviarRespuesta" class="boton-enviar">Enviar</button>
-      <!-- Si quieres botón cancelar agrega aquí -->
-      <!-- <button id="cancelarRespuesta" class="boton-cancelar">Cancelar</button> -->
-    </div>
-  </section>
 </div>
-
-<script>
-  async function cargarUsuarios() {
-    const res = await fetch("/api/usuarios");
-    const usuarios = await res.json();
-    // Rellenar tablaUsuarios con datos
-  }
-
-  async function cargarMensajes() {
-    const res = await fetch("/api/messages?status=pending");
-    const mensajes = await res.json();
-    // Rellenar listaMensajes con datos
-  }
-
-  // Añadir eventos para mostrar detalles y enviar respuestas...
-
-  cargarUsuarios();
-  cargarMensajes();
-</script>
