@@ -16,6 +16,7 @@ exports.contacto = (req, res) => {
   res.render("contacto", {
     title: "Contacto - CuidaT",
     activo: "contacto",
+    apiUrl: process.env.API_BASE_URL,
   });
 };
 
@@ -24,4 +25,17 @@ exports.acerca = (req, res) => {
     title: "Acerca de - CuidaT",
     activo: "acerca",
   });
+};
+
+exports.login = (req, res) => {
+  res.render("auth/login", {
+    title: "Login - CuidaT",
+    activo: "login",
+    apiUrl: process.env.API_URL,
+  });
+};
+
+exports.logout = (req, res) => {
+  res.clearCookie("token");
+  res.redirect("/login");
 };

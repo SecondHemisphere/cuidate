@@ -19,4 +19,10 @@ router.get("/acerca", (req, res) => {
   mainController.acerca(req, res, "acerca");
 });
 
+router.get("/login", (req, res) => {
+  mainController.login(req, res, "auth/login");
+});
+
+router.get("/logout", mainController.logout);
+
 module.exports = router;

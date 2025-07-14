@@ -1,0 +1,77 @@
+<div class="login-form-container">
+  <h2>Iniciar sesión</h2>
+  <form id="loginForm" novalidate>
+    <div class="campo">
+      <label for="usuario">Usuario</label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="Usuario"
+        required
+      />
+    </div>
+    <div class="campo">
+      <label for="password">Contraseña</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Contraseña"
+        required
+      />
+    </div>
+    <button type="submit" class="boton-ingresar">Ingresar</button>
+    <div id="loginError" class="mensaje-error oculto"></div>
+  </form>
+</div>
+
+<script>
+  const API_BASE_URL = "<%= apiUrl %>";
+</script>
+
+<script>
+  document
+    .getElementById("loginForm")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const usuario = document.getElementById("usuario").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const loginError = document.getElementById("loginError");
+
+      loginError.classList.add("oculto");
+      loginError.textContent = "";
+
+      try {
+        const res = await fetch(`http://localhost:4000/api/auth/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ usuario, password }),
+        });
+
+        if (!res.ok) {
+          let errorMsg = "Credenciales inválidas";
+          try {
+            const errorData = await res.json();
+            if (errorData && errorData.message) {
+              errorMsg = errorData.message;
+            }
+          } catch {}
+          throw new Error(errorMsg);
+        }
+
+        const data = await res.json();
+
+        if (data.body) {
+          localStorage.setItem("token", data.body);
+          window.location.href = "/admin/dashboard";
+        } else {
+          throw new Error("Token no recibido");
+        }
+      } catch (err) {
+        loginError.textContent = err.message;
+        loginError.classList.remove("oculto");
+      }
+    });
+</script>

@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    fetch("http://localhost:4000/api/mensajes", {
+    fetch(`${API_BASE_URL}/mensajes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

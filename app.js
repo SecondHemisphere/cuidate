@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 const expressLayouts = require("express-ejs-layouts");
@@ -29,7 +31,8 @@ app.use((req, res, next) => {
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(expressLayouts);
-app.set("layout", "layout");
+app.set("layout", "layouts/public");
+
 
 // ------------------------------
 // Archivos estáticos
@@ -44,9 +47,13 @@ app.use(express.static(__dirname + "/public"));
 const mainRoutes = require("./routes/mainRoutes");
 app.use("/", mainRoutes);
 
-// Rutas API (aquí estarán tus endpoints tipo /api/mensajes)
+// Rutas API
 const apiRoutes = require("./routes/apiRoutes");
 app.use("/api", apiRoutes);
+
+// Rutas para admin
+const adminRoutes = require("./routes/adminRoutes");
+app.use("/admin", adminRoutes);
 
 // ------------------------------
 // Inicio del servidor
@@ -55,5 +62,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor en http://localhost:${PORT}`);
 });
-
-

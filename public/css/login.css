@@ -1,0 +1,114 @@
+.login-form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 0.4rem 0.1rem var(--color-sombra-caja);
+  margin: 2rem auto;
+  max-width: 40rem;
+}
+
+.login-form-container h2 {
+  font-size: 1.8rem;
+  color: var(--color-oscuro);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-form-container .campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.login-form-container .campo label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.login-form-container .campo input {
+  padding: 0.75rem;
+  border: 0.2rem solid var(--color-oscuro);
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.login-form-container .campo input:focus {
+  border-color: var(--color-secundario);
+}
+
+.login-form-container .boton-ingresar {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login-form-container .boton-ingresar:hover {
+  background-color: var(--color-secundario-hover, #2c7a7b);
+}
+
+.login-form-container .mensaje-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--color-caja-peligro);
+  color: var(--color-peligro);
+  border: 1px solid var(--color-borde-peligro);
+}
+
+.oculto {
+  display: none;
+}
+
+/* Botón Ingresar*/
+.boton-ingresar {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  justify-items: center;
+}
+
+/* Mensajes de Respuesta */
+.mensaje-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #f8d7da;
+  color: var(--color-peligro);
+  border: 1px solid var(--color-border-peligro);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-form-container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .login-form-container h2,
+  .login-form-container .campo label,
+  .login-form-container .campo input,
+  .login-form-container .boton-enviar {
+    font-size: 1.4rem;
+  }
+}

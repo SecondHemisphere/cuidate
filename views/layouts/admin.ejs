@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Panel de Administración - CuidaT" />
+    <meta name="author" content="Equipo de CuidaT" />
+
+    <title><%= title || 'CuidaT Admin' %></title>
+
+    <link rel="icon" href="/image/logo.png" type="image/png" />
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+    <!-- Hoja CSS exclusiva admin -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="/image/logo.png" alt="CuidaT Admin" />
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="/admin/dashboard"
+                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="/admin/usuarios"
+                ><i class="fas fa-users"></i> Usuarios</a
+              >
+            </li>
+            <li>
+              <a href="/admin/mensajes"
+                ><i class="fas fa-envelope"></i> Mensajes</a
+              >
+            </li>
+            <li>
+              <a href="/admin/configuracion"
+                ><i class="fas fa-cogs"></i> Configuración</a
+              >
+            </li>
+            <li>
+              <a href="/"><i class="fas fa-home"></i> Volver al sitio</a>
+            </li>
+            <li>
+              <a href="/logout"
+                ><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Contenido principal -->
+      <div class="main-admin">
+        <!-- Header Admin -->
+        <header class="admin-header">
+          <h1>Panel de Administración</h1>
+        </header>
+
+        <!-- Contenido dinámico -->
+        <main class="contenido-admin"><%- body %></main>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/admin.js"></script>
+  </body>
+</html>
