@@ -9,6 +9,7 @@ router.get("/dashboard", (req, res) => {
 });
 
 router.get("/mensajes", mensajesController.index);
+
 router.get("/mensajes/create", mensajesController.create);
 router.post("/mensajes", mensajesController.store);
 router.get("/mensajes/:id", mensajesController.show);

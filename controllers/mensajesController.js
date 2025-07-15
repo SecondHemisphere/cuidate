@@ -3,6 +3,7 @@ const {
   crearMensaje,
   actualizarMensaje,
   eliminarMensaje,
+  obtenerMensajePorId,
 } = require("../services/mensajesService");
 
 // 1. Listar todos los mensajes
@@ -25,6 +26,9 @@ exports.create = (req, res) => {
   res.render("admin/mensajes/create", {
     title: "Crear Mensaje",
     layout: "layouts/admin",
+    formAction: "/admin/mensajes",
+    formMethod: "POST",
+    mensaje: null,
   });
 };
 
@@ -32,11 +36,11 @@ exports.create = (req, res) => {
 exports.store = async (req, res) => {
   try {
     const datosMensaje = req.body;
-    const mensajeCreado = await crearMensaje(datosMensaje);
-    res.redirect("/mensajes"); // Redirige a lista después de crear
+    await crearMensaje(datosMensaje);
+    res.redirect("/admin/mensajes/index");
   } catch (error) {
     console.error(error);
-    res.status(500).send("Error al crear mensaje");
+    res.status(500).send("Error al crear mensajes");
   }
 };
 
@@ -49,7 +53,7 @@ exports.show = async (req, res) => {
     res.render("admin/mensajes/show", {
       title: "Detalle Mensaje",
       layout: "layouts/admin",
-      mensaje,
+      mensaje: mensaje.body,
     });
   } catch (error) {
     console.error(error);
@@ -66,7 +70,9 @@ exports.edit = async (req, res) => {
     res.render("admin/mensajes/edit", {
       title: "Editar Mensaje",
       layout: "layouts/admin",
-      mensaje,
+      formAction: `/mensajes/${id}?_method=PUT`,
+      formMethod: "POST",
+      mensaje: mensaje.body,
     });
   } catch (error) {
     console.error(error);
@@ -74,7 +80,7 @@ exports.edit = async (req, res) => {
   }
 };
 
-// 6. Actualizar mensaje
+// 6. Actualizar mensaje (PUT)
 exports.update = async (req, res) => {
   try {
     const id = req.params.id;
@@ -87,7 +93,7 @@ exports.update = async (req, res) => {
   }
 };
 
-// 7. Eliminar mensaje
+// 7. Eliminar mensaje (DELETE)
 exports.destroy = async (req, res) => {
   try {
     const id = req.params.id;

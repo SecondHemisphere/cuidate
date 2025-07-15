@@ -5,7 +5,7 @@
       <th><%= col.titulo %></th>
       <% }) %> <% if (acciones && (acciones.ver || acciones.editar ||
       acciones.eliminar)) { %>
-      <th>Acciones</th>
+      <th class="acciones-columna">Acciones</th>
       <% } %>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
       <td><%= fila[col.propiedad] %></td>
       <% }) %> <% if (acciones && (acciones.ver || acciones.editar ||
       acciones.eliminar)) { %>
-      <td>
+      <td class="acciones-columna">
         <% if (acciones.ver) { %>
         <a
           href="<%= acciones.ver.url.replace(':id', fila.id) %>"

@@ -47,9 +47,8 @@
   <div class="crud-form-grupo">
     <label for="estado">Estado</label>
     <select id="estado" name="estado" required class="crud-select">
-      <option value="nuevo" <%= mensaje && mensaje.estado === 'nuevo' ? 'selected' : '' %>>Nuevo</option>
-      <option value="leido" <%= mensaje && mensaje.estado === 'leido' ? 'selected' : '' %>>Leído</option>
-      <option value="respondido" <%= mensaje && mensaje.estado === 'respondido' ? 'selected' : '' %>>Respondido</option>
+      <option value="NUEVO" <%= mensaje && mensaje.estado === 'nuevo' ? 'selected' : '' %>>Nuevo</option>
+      <option value="LEIDO" <%= mensaje && mensaje.estado === 'leido' ? 'selected' : '' %>>Leído</option>
     </select>
   </div>
 
@@ -58,7 +57,7 @@
     <button type="submit" class="crud-btn-primario">
       <i class="fas fa-save"></i> Guardar
     </button>
-    <a href="/mensajes" class="crud-btn-ver">
+    <a href="/admin/mensajes" class="crud-btn-ver">
       <i class="fas fa-arrow-left"></i> Volver
     </a>
   </div>

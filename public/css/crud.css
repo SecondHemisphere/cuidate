@@ -15,8 +15,10 @@
 }
 
 /* Sección acciones */
-.crud-acciones {
-  margin-bottom: 2rem;
+.crud-tabla th.acciones-columna,
+.crud-tabla td.acciones-columna {
+  width: 150px;
+  text-align: center;
 }
 
 /* Botón Primario (Crear nuevo) */
@@ -33,6 +35,7 @@
   transition: background-color 0.3s ease;
   color: var(--color-texto-claro);
   background-color: var(--color-primario);
+  margin-bottom: 2rem;
 }
 
 .crud-btn-primario i {
@@ -43,19 +46,18 @@
   background-color: var(--color-gravedad-emergencia);
 }
 
-/* Botón Ver (gris) */
+/* Botón Ver */
 .crud-btn-ver {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
   border: none;
-  background-color: #7f8c8d; /* gris */
+  background-color: #7f8c8d;
   color: var(--color-texto-claro);
-  margin-right: 0.4rem;
   transition: background-color 0.3s ease;
 }
 
@@ -64,22 +66,21 @@
 }
 
 .crud-btn-ver:hover {
-  background-color: #636e72; /* gris oscuro */
+  background-color: #636e72;
 }
 
-/* Botón Editar (celeste) */
+/* Botón Editar */
 .crud-btn-editar {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
   border: none;
   background-color: var(--color-informacion);
   color: var(--color-texto-claro);
-  margin-right: 0.4rem;
   transition: background-color 0.3s ease;
 }
 
@@ -88,15 +89,15 @@
 }
 
 .crud-btn-editar:hover {
-  background-color: #217dbb; /* azul más oscuro */
+  background-color: #217dbb;
 }
 
-/* Botón Eliminar (rojo) */
+/* Botón Eliminar */
 .crud-btn-eliminar {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
@@ -187,7 +188,7 @@ textarea {
   box-sizing: border-box;
   margin-top: 0.4rem;
   margin-bottom: 1.5rem;
-  resize: vertical; /* solo textarea es redimensionable verticalmente */
+  resize: vertical;
 }
 
 input[type="text"]:focus,

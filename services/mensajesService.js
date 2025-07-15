@@ -43,9 +43,17 @@ async function eliminarMensaje(id) {
   return await response.json();
 }
 
+// Obtener mensaje por id (GET)
+async function obtenerMensajePorId(id) {
+  const response = await fetch(`${API_URL}/${id}`);
+  if (!response.ok) throw new Error("Error al obtener mensaje");
+  return await response.json();
+}
+
 module.exports = {
   obtenerMensajes,
   crearMensaje,
   actualizarMensaje,
   eliminarMensaje,
+  obtenerMensajePorId,
 };

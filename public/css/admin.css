@@ -103,8 +103,8 @@
 
 /* Contenido principal */
 .main-admin {
-  margin-left: 250px; /* dejar espacio para el sidebar */
-  padding-top: 60px; /* altura header fijo */
+  margin-left: 250px;
+  padding-top: 60px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;

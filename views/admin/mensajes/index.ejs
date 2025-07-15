@@ -2,7 +2,7 @@
   <h1 class="crud-titulo">Mensajes</h1>
 
   <div class="crud-acciones">
-    <a href="/admin/mensajes/create" class="crud-btn-primario">
+    <a href="mensajes/create" class="crud-btn-primario">
       <i class="fas fa-plus"></i> Nuevo Mensaje
     </a>
   </div>
@@ -10,7 +10,7 @@
   <%- include('../../components/_tablaGenerica', { columnas: [ { titulo: 'ID',
   propiedad: 'id' }, { titulo: 'Nombre', propiedad: 'nombre' }, { titulo:
   'Email', propiedad: 'email' }, { titulo: 'Mensaje', propiedad: 'mensaje' }, {
-  titulo: 'Estado', propiedad: 'estado' }, ], filas: mensajes, acciones: { ver:
-  { url: '/mensajes/:id' }, editar: { url: '/mensajes/:id/editar' }, eliminar: {
-  url: '/mensajes/:id' } } }) %>
+  titulo: 'Estado', propiedad: 'estado' } ], filas: mensajes, acciones: { ver: {
+  url: 'mensajes/:id' }, editar: { url: 'mensajes/:id/edit' }, eliminar: {
+  url: 'mensajes/:id' } } }) %>
 </div>

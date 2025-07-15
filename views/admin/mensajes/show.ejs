@@ -1,0 +1,22 @@
+<div class="crud-contenedor" id="detalle-mensaje">
+  <h1 class="crud-titulo">Detalle de Mensaje</h1>
+
+  <div class="crud-detalle">
+    <p><strong>ID:</strong> <%= mensaje.id %></p>
+    <p><strong>Nombre:</strong> <%= mensaje.nombre %></p>
+    <p><strong>Email:</strong> <%= mensaje.email %></p>
+    <p>
+      <strong>Teléfono:</strong> <%= mensaje.telefono ? mensaje.telefono : 'No
+      registrado' %>
+    </p>
+    <p><strong>Mensaje:</strong> <%= mensaje.mensaje %></p>
+    <p><strong>Estado:</strong> <%= mensaje.estado %></p>
+    <p><strong>Fecha de envío:</strong> <%= mensaje.fecha_envio %></p>
+  </div>
+
+  <div class="crud-acciones">
+    <a href="/admin/mensajes" class="crud-btn-ver">
+      <i class="fas fa-arrow-left"></i> Volver
+    </a>
+  </div>
+</div>

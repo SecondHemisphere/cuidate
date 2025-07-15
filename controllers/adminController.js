@@ -6,7 +6,7 @@ exports.dashboard = async (req, res) => {
     const usuarios = await obtenerUsuarios();
     const mensajes = await obtenerMensajes();
 
-    const pendientes = mensajes.body.filter((m) => m.estado === "nuevo");
+    const pendientes = mensajes.body.filter((m) => m.estado === "NUEVO");
 
     res.render("admin/dashboard", {
       title: "Dashboard Admin",
