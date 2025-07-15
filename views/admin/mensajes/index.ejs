@@ -1,60 +1,16 @@
 <div class="crud-contenedor" id="mensajes">
   <h1 class="crud-titulo">Mensajes</h1>
 
-  <!-- Botón para crear nuevo mensaje -->
   <div class="crud-acciones">
     <a href="/admin/mensajes/create" class="crud-btn-primario">
       <i class="fas fa-plus"></i> Nuevo Mensaje
     </a>
   </div>
 
-  <!-- Tabla de mensajes -->
-  <table class="crud-tabla">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Email</th>
-        <th>Mensaje</th>
-        <th>Estado</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% if (mensajes.length > 0) { %> <% mensajes.forEach(m => { %>
-      <tr>
-        <td><%= m.id %></td>
-        <td><%= m.nombre %></td>
-        <td><%= m.email %></td>
-        <td><%= m.mensaje %></td>
-        <td><%= m.estado %></td>
-        <td>
-          <a href="/mensajes/<%= m.id %>" class="crud-btn-ver">
-            <i class="fas fa-eye"></i>
-          </a>
-          <a href="/mensajes/<%= m.id %>/editar" class="crud-btn-editar">
-            <i class="fas fa-edit"></i>
-          </a>
-          <form
-            action="/mensajes/<%= m.id %>?_method=DELETE"
-            method="POST"
-            class="crud-form-eliminar"
-          >
-            <button
-              type="submit"
-              class="crud-btn-eliminar"
-              onclick="return confirm('¿Eliminar este mensaje?')"
-            >
-              <i class="fas fa-trash"></i>
-            </button>
-          </form>
-        </td>
-      </tr>
-      <% }) %> <% } else { %>
-      <tr>
-        <td colspan="6">No hay mensajes registrados.</td>
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
+  <%- include('../../components/_tablaGenerica', { columnas: [ { titulo: 'ID',
+  propiedad: 'id' }, { titulo: 'Nombre', propiedad: 'nombre' }, { titulo:
+  'Email', propiedad: 'email' }, { titulo: 'Mensaje', propiedad: 'mensaje' }, {
+  titulo: 'Estado', propiedad: 'estado' }, ], filas: mensajes, acciones: { ver:
+  { url: '/mensajes/:id' }, editar: { url: '/mensajes/:id/editar' }, eliminar: {
+  url: '/mensajes/:id' } } }) %>
 </div>

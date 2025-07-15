@@ -1,0 +1,59 @@
+<table class="crud-tabla">
+  <thead>
+    <tr>
+      <% columnas.forEach(col => { %>
+      <th><%= col.titulo %></th>
+      <% }) %> <% if (acciones && (acciones.ver || acciones.editar ||
+      acciones.eliminar)) { %>
+      <th>Acciones</th>
+      <% } %>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (filas.length > 0) { %> <% filas.forEach(fila => { %>
+    <tr>
+      <% columnas.forEach(col => { %>
+      <td><%= fila[col.propiedad] %></td>
+      <% }) %> <% if (acciones && (acciones.ver || acciones.editar ||
+      acciones.eliminar)) { %>
+      <td>
+        <% if (acciones.ver) { %>
+        <a
+          href="<%= acciones.ver.url.replace(':id', fila.id) %>"
+          class="crud-btn-ver"
+        >
+          <i class="fas fa-eye"></i>
+        </a>
+        <% } %> <% if (acciones.editar) { %>
+        <a
+          href="<%= acciones.editar.url.replace(':id', fila.id) %>"
+          class="crud-btn-editar"
+        >
+          <i class="fas fa-edit"></i>
+        </a>
+        <% } %> <% if (acciones.eliminar) { %>
+        <form
+          action="<%= acciones.eliminar.url.replace(':id', fila.id) %>?_method=DELETE"
+          method="POST"
+          class="crud-form-eliminar"
+          onsubmit="return confirm('¿Eliminar este registro?')"
+        >
+          <button type="submit" class="crud-btn-eliminar">
+            <i class="fas fa-trash"></i>
+          </button>
+        </form>
+        <% } %>
+      </td>
+      <% } %>
+    </tr>
+    <% }) %> <% } else { %>
+    <tr>
+      <td
+        colspan="<%= columnas.length + ((acciones && (acciones.ver || acciones.editar || acciones.eliminar)) ? 1 : 0) %>"
+      >
+        No hay registros.
+      </td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
