@@ -1,0 +1,241 @@
+/* Contenedor principal */
+.crud-contenedor {
+  padding: 2rem 3rem;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-principal);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+.crud-titulo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-oscuro);
+  margin-bottom: 2rem;
+}
+
+/* Sección acciones */
+.crud-acciones {
+  margin-bottom: 2rem;
+}
+
+/* Botón Primario (Crear nuevo) */
+.crud-btn-primario {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  color: var(--color-texto-claro);
+  background-color: var(--color-primario);
+}
+
+.crud-btn-primario i {
+  margin-right: 0.5rem;
+}
+
+.crud-btn-primario:hover {
+  background-color: var(--color-gravedad-emergencia);
+}
+
+/* Botón Ver (gris) */
+.crud-btn-ver {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: #7f8c8d; /* gris */
+  color: var(--color-texto-claro);
+  margin-right: 0.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.crud-btn-ver i {
+  vertical-align: middle;
+}
+
+.crud-btn-ver:hover {
+  background-color: #636e72; /* gris oscuro */
+}
+
+/* Botón Editar (celeste) */
+.crud-btn-editar {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-informacion);
+  color: var(--color-texto-claro);
+  margin-right: 0.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.crud-btn-editar i {
+  vertical-align: middle;
+}
+
+.crud-btn-editar:hover {
+  background-color: #217dbb; /* azul más oscuro */
+}
+
+/* Botón Eliminar (rojo) */
+.crud-btn-eliminar {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-peligro);
+  color: var(--color-texto-claro);
+  transition: background-color 0.3s ease;
+}
+
+.crud-btn-eliminar i {
+  vertical-align: middle;
+}
+
+.crud-btn-eliminar:hover {
+  background-color: var(--color-gravedad-grave);
+}
+
+/* Form eliminar inline */
+.crud-form-eliminar {
+  display: inline;
+}
+
+/* Tabla */
+.crud-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.6rem;
+  box-shadow: 0 0 0.5rem var(--color-sombra-caja);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background-color: var(--color-claro);
+  color: var(--color-texto-principal);
+}
+
+.crud-tabla th,
+.crud-tabla td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde-panel);
+}
+
+.crud-tabla th {
+  background-color: var(--color-oscuro);
+  color: var(--color-texto-claro);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.crud-tabla tr:hover {
+  background-color: var(--color-formulario-contacto);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .crud-contenedor {
+    padding: 1rem 1.5rem;
+  }
+
+  .crud-tabla th,
+  .crud-tabla td {
+    padding: 0.8rem;
+  }
+
+  .crud-btn-primario,
+  .crud-btn-ver,
+  .crud-btn-editar,
+  .crud-btn-eliminar {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Estilos generales para inputs, selects y textarea */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  border: 1px solid var(--color-borde-panel);
+  border-radius: 0.5rem;
+  background-color: var(--color-claro);
+  color: var(--color-texto-principal);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+  resize: vertical; /* solo textarea es redimensionable verticalmente */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 5px var(--color-primario);
+  outline: none;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--color-oscuro);
+  margin-bottom: 0.3rem;
+}
+
+/* Contenedor del formulario */
+.crud-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Botón enviar (puedes reutilizar crud-btn-primario) */
+.crud-btn-submit {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crud-btn-submit:hover {
+  background-color: var(--color-gravedad-emergencia);
+}
+
+/* Mensajes de error */
+.error-msg {
+  color: var(--color-peligro);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}

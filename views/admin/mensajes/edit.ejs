@@ -1,0 +1,7 @@
+<div class="crud-contenedor" id="editar-mensaje">
+  <h1 class="crud-titulo">Editar Mensaje</h1>
+
+  <% var formAction = '/mensajes/' + mensaje.id; %> <% var formMethod = 'PUT';
+  %> <%- include('./_form.ejs', { formAction: formAction, formMethod:
+  formMethod, mensaje: mensaje }) %>
+</div>
