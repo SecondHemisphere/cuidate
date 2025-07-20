@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sofía Martínez",
+    "edad": 28,
+    "email": "sofia.martinez@ejemplo.com",
+    "telefono": "0987654321",
+    "mensaje": "Me gustaría saber más sobre cómo actuar en caso de una quemadura de segundo grado en un niño."
+  },
+  {
+    "id": 2,
+    "nombre": "Diego Alonso",
+    "edad": 35,
+    "email": "diego.alonso@dominio.com",
+    "telefono": "0991234567",
+    "mensaje": "Tengo una pregunta sobre la sección de atragantamiento, específicamente en bebés."
+  },
+  {
+    "id": 3,
+    "nombre": "Valeria Rojas",
+    "edad": 22,
+    "email": "valeria.r@correo.net",
+    "telefono": "0960001111",
+    "mensaje": "Necesito ayuda para entender cuándo es necesario llamar a emergencias en un desmayo."
+  },
+  {
+    "id": 4,
+    "nombre": "Carlos Santana",
+    "edad": 35,
+    "email": "carlos.s@techcorp.com",
+    "telefono": "0975554444",
+    "mensaje": "Su guía sobre RCP es muy clara. ¿Hay algún curso presencial que recomienden?"
+  },
+  {
+    "id": 5,
+    "nombre": "Andrea Fuentes",
+    "edad": 31,
+    "email": "andrea.f@webmail.org",
+    "telefono": "0983332222",
+    "mensaje": "Experimenté un sangrado nasal que no se detiene, ¿hay algún consejo adicional?"
+  },
+  {
+    "id": 6,
+    "nombre": "Javier Castillo",
+    "edad": 29,
+    "email": "javier.c@empresa.es",
+    "telefono": "0990010020",
+    "mensaje": "Solicito más información sobre cómo manejar fracturas expuestas antes de la llegada de ayuda."
+  },
+  {
+    "id": 7,
+    "nombre": "Paula Hernández",
+    "edad": 25,
+    "email": "paula.h@globalnet.com",
+    "telefono": "0961239876",
+    "mensaje": "El artículo sobre cortes y raspones fue útil, pero tengo dudas sobre la desinfección."
+  },
+  {
+    "nombre": "María López",
+    "edad": 27,
+    "email": "maria.lopez@example.com",
+    "telefono": "0998765432",
+    "mensaje": "Hola, quisiera saber más sobre primeros auxilios.",
+    "id": 8
+  }
+]

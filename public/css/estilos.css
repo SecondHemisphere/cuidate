@@ -1,0 +1,348 @@
+:root {
+  --color-primario: #e74c3c;
+  --color-secundario: #3498db;
+  --color-acento: #2ecc71;
+  --color-oscuro: #3a4e61;
+  --color-claro: #ecf0f1;
+  --color-encabezado: #e0ebee;
+  --color-advertencia: #f39c12;
+  --color-peligro: #c0392b;
+  --color-exito: #27ae60;
+  --color-borde-peligro: #f5c6cb;
+  --color-borde-exito: #c3e6cb;
+  --color-informacion: #3498db;
+  --color-texto-principal: #333;
+  --color-fondo: #f9f9f9;
+  --color-texto-claro: white;
+  --color-sombra-caja: rgba(0, 0, 0, 0.1);
+  --color-borde-panel: #ecf0f1;
+  --color-gravedad-leve: #27ae60;
+  --color-gravedad-moderado: #f1c40f;
+  --color-gravedad-moderado-grave: #e67e22;
+  --color-gravedad-grave: #c0392b;
+  --color-gravedad-emergencia: #e74c3c;
+  --color-gravedad-emergencia-vital: #9b59b6;
+  --color-formulario-contacto: #fdfafa;
+  --color-caja-advertencia: #fff3cd;
+  --color-caja-peligro: #f8d7da;
+  --color-rol: #777;
+  --color-subtitulo: #555;
+}
+
+/* Estilos Generales */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: var(--color-texto-principal);
+  background-color: var(--color-fondo);
+  font-size: 1.5rem;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  height: 7rem;
+  width: auto;
+}
+
+.texto-encabezado {
+  flex: 1;
+}
+
+.texto-encabezado h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: 1.7rem;
+  opacity: 0.9;
+  margin-top: 0;
+}
+
+.texto-celeste {
+  color: var(--color-secundario);
+}
+
+.texto-rojo {
+  color: var(--color-primario);
+}
+
+.texto-blanco {
+  color: var(--color-texto-claro);
+}
+
+/* Navegación */
+.navegacion {
+  background-color: var(--color-oscuro);
+  color: var(--color-texto-claro);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navegacion .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navegacion .logo-nav {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-secundario);
+  text-decoration: none;
+}
+
+.navegacion .logo-nav:hover {
+  color: var(--color-acento);
+}
+
+.navegacion .menu {
+  display: flex;
+  gap: 5rem;
+  list-style: none;
+}
+
+.navegacion .menu li {
+  list-style: none;
+}
+
+.navegacion .menu a {
+  font-size: 1.6rem;
+  color: var(--color-texto-claro);
+  text-decoration: none;
+}
+
+.navegacion .menu a:hover {
+  color: var(--color-acento);
+  transform: translateY(-0.2rem);
+}
+
+.navegacion .texto-celeste {
+  color: var(--color-secundario);
+}
+
+.navegacion .texto-rojo {
+  color: var(--color-primario);
+}
+
+.navegacion .menu a.menu-activo {
+    color: var(--color-acento);
+    font-weight: bold;
+    border-bottom: 0.2rem solid var(--color-acento);
+    padding-bottom: 0.2rem;
+}
+
+.navegacion .menu a.menu-activo:hover {
+    color: var(--color-acento);
+    transform: none;
+}
+
+.boton-menu {
+    background: none;
+    border: none;
+    color: var(--color-texto-claro);
+    cursor: pointer;
+    font-size: 2.5rem;
+    display: none;
+}
+
+/* Contenido Principal */
+ol li::marker {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.listado li::marker {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--color-primario);
+}
+
+.llamada-emergencia {
+  background-color: var(--color-peligro);
+  color: var(--color-texto-claro);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.llamada-emergencia i {
+  margin-right: 1rem;
+}
+
+/* Pie de Página */
+footer {
+  background-color: var(--color-oscuro);
+  color: var(--color-texto-claro);
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  border-top: 0.1rem solid var(--color-secundario);
+}
+
+.pie-de-pagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.seccion-pie {
+  flex: 1 1 30rem;
+  min-width: 25rem;
+}
+
+.seccion-pie h3 {
+  color: var(--color-encabezado);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.seccion-pie p {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.icono-pie {
+  color: var(--color-claro);
+  font-size: 1.4rem;
+  padding-right: 0.5rem;
+}
+
+.enlace-pie {
+  color: var(--color-texto-claro);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.enlace-pie:hover {
+  color: var(--color-acento);
+  text-decoration: underline;
+}
+
+.legal-pie {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.legal-pie p {
+  margin-bottom: 0.2rem;
+  font-size: 1.4rem;
+  color: #aaa;
+  opacity: 0.8;
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  .pie-de-pagina-simple {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .seccion-pie {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .seccion-pie.legal-pie {
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .boton-menu {
+    display: block;
+  }
+
+  .navegacion .contenedor {
+    justify-content: space-between;
+  }
+
+  .navegacion .menu {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    background-color: var(--color-oscuro);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    width: 15rem;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 0.2rem 1rem var(--color-sombra-caja);
+  }
+
+  .navegacion .menu.active {
+    display: flex;
+  }
+
+  .navegacion .menu a {
+    font-size: 1.8rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .logo {
+    height: 5rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .navegacion .menu {
+    width: 100%;
+    right: 0;
+    top: 6rem;
+    border-radius: 0;
+  }
+
+  .navegacion .menu a {
+    font-size: 1.6rem;
+  }
+
+  .llamada-emergencia {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .seccion-pie {
+    font-size: 1.3rem;
+  }
+
+  .legal-pie p {
+    font-size: 1.2rem;
+  }
+}

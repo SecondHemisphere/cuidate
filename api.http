@@ -1,0 +1,33 @@
+# ==============================================
+#  Endpoints de la API de mensajes
+# ==============================================
+
+### Obtener todos los mensajes
+GET http://localhost:3000/mensajes
+
+### Buscar mensajes con nombre, edad y email
+GET http://localhost:3000/mensajes?nombre=Diego&edad=35&email=dominio.com
+
+### Buscar mensajes con nombre, edad y teléfono
+GET http://localhost:3000/mensajes?nombre=Paula&edad=25&telefono=0961239876
+
+### Buscar mensajes con email, teléfono y mensaje
+GET http://localhost:3000/mensajes?email=empresa.es&telefono=0990010020&mensaje=fracturas
+
+### Buscar mensajes con nombre, mensaje y email
+GET http://localhost:3000/mensajes?nombre=Andrea&mensaje=sangrado&email=webmail.org
+
+### Buscar mensajes con edad, teléfono y mensaje
+GET http://localhost:3000/mensajes?edad=28&telefono=0987654321&mensaje=quemadura
+
+#### Crear un nuevo mensaje
+POST http://localhost:3000/mensajes
+Content-Type: application/json
+
+{
+  "nombre": "María López",
+  "edad": 27,
+  "email": "maria.lopez@example.com",
+  "telefono": "0998765432",
+  "mensaje": "Hola, quisiera saber más sobre primeros auxilios."
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CuidaT: Guía de primeros auxilios para emergencias comunes."
+    />
+    <meta
+      name="keywords"
+      content="CuidaT, primeros auxilios, emergencia, guía"
+    />
+    <meta name="author" content="Equipo de Primeros Auxilios de CuidaT" />
+
+    <title>CuidaT: Guía de Primeros Auxilios</title>
+
+    <link rel="icon" href="image/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navegacion" role="navigation">
+        <div class="contenedor">
+          <a href="index.html" class="logo-nav" aria-label="CuidaT Inicio">
+            <span class="texto-blanco">cuidaT</span>
+          </a>
+          <button class="boton-menu" aria-label="Menú de navegación">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="guia.html">Guía</a></li>
+            <li><a href="contacto.html" class="menu-activo">Contacto</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="contenedor">
+      <!-- Contáctanos -->
+      <section class="contactanos">
+        <div class="texto">
+          <h1>Contáctanos</h1>
+          <p class="subtitulo">
+            Estamos aquí para ayudarte. Envíanos tus preguntas o comentarios.
+          </p>
+        </div>
+        <img src="image/cuidat.png" alt="Logo CuidaT" class="logo" />
+      </section>
+
+      <!-- Envíanos un mensaje -->
+      <section class="formulario-contacto">
+        <h2>Envíanos un mensaje</h2>
+        <form id="formularioDeContacto">
+          <div class="campos-pequenos">
+            <div class="campo">
+              <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+              <p class="error-mensaje" id="errorNombre"></p>
+            </div>
+
+            <div class="campo">
+              <label for="edad"><i class="fas fa-calendar"></i> Edad:</label>
+              <input type="number" id="edad" name="edad" min="1" required />
+              <p class="error-mensaje" id="errorEdad"></p>
+            </div>
+
+            <div class="campo">
+              <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+              <input type="email" id="email" name="email" required />
+              <p class="error-mensaje" id="errorEmail"></p>
+            </div>
+
+            <div class="campo">
+              <label for="telefono"
+                ><i class="fas fa-phone"></i> Teléfono (opcional):</label
+              >
+              <input type="tel" id="telefono" name="telefono" />
+              <p class="error-mensaje" id="errorTelefono"></p>
+            </div>
+          </div>
+
+          <div class="campo campo-grande">
+            <label for="mensaje"
+              ><i class="fas fa-comment-dots"></i> Mensaje:</label
+            >
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <p class="error-mensaje" id="errorMensaje"></p>
+          </div>
+
+          <button type="submit" class="boton-enviar">
+            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+          </button>
+
+          <!-- Mensajes Ocultos -->
+          <div id="mensajeEnviado" class="mensaje-enviado oculto">
+            <p>¡Gracias! Tu mensaje ha sido enviado correctamente.</p>
+          </div>
+          <div id="mensajeError" class="mensaje-error oculto">
+            <p>
+              Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Pie De Página -->
+    <footer>
+      <div class="pie-de-pagina">
+        <div class="seccion-pie contacto">
+          <h3>Contacto</h3>
+          <p>
+            <i class="fas fa-envelope icono-pie"></i>
+            <a href="mailto:info@cuidat.com" class="enlace-pie"
+              >info@cuidat.com</a
+            >
+          </p>
+          <p>
+            <i class="fas fa-phone-alt icono-pie"></i>
+            <a href="tel:+593999999999" class="enlace-pie">+593 999 999 999</a>
+          </p>
+          <p>
+            <i class="fas fa-map-marker-alt icono-pie"></i>
+            <a
+              href="https://www.google.com/maps/place/Guayaquil"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="enlace-pie"
+              >Guayaquil, Ecuador</a
+            >
+          </p>
+        </div>
+        <div class="seccion-pie legal-pie">
+          <p><a href="#" class="enlace-pie">Política de Privacidad</a></p>
+          <p><a href="#" class="enlace-pie">Términos de Uso</a></p>
+          <p class="copyright-pie">
+            © 2025 CuidaT. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/contacto.js"></script>
+  </body>
+</html>
